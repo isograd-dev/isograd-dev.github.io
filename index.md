@@ -51,8 +51,50 @@ There are two environments, one for testing and the other for production:
 The testing environment is IP-restricted: please send the IP addresses you will use to connect to the testing environment to [support@isograd.com](mailto:support@isograd.com).
 
 ### Use a service
-To use a service, make a POST request to the URL of the chosen environment. The header must contain the field `Authorisation: OAuth <your_token>`.
+To use a service, make a POST request to the URL of the chosen environment. The header must contain the field `Authorisation: Bearer <your_token>`.
 
+### Example
+Here is a Python script retrieving an access token, and using the service to [create a candidate](#create-a-candidate)
+
+```python
+import requests
+
+# Retrieve the access token
+credentials = {
+    'client_id': 's0u2c72bman19nm2c45oi1fpea',
+    'client_secret': '1mio0273po6si9tvt2f3ld5t6o4hsg02epq71rlfdhlkombkv8ro',
+}
+auth_url = 'https://auth.isograd.com/oauth2/token?grant_type=client_credentials&scopes=usage'
+
+r_token = requests.post(auth_url, data=credentials)
+access_token = r_token.json()['access_token']
+
+# Use the service
+headers = {'Authorisation': 'Bearer ' + access_token}
+url_dev = 'https://appdev.isograd.com/api/usage'
+
+payload = {
+    'act_id': 1,
+    'gen_id': 3,
+    'ema': 'test@isograd.com',
+    'fst_nam': 'John',
+    'lst_nam': 'Doe',
+}
+
+r_action = requests.post(url_dev, data=payload, headers=headers)
+print(r_action.json())
+
+```
+
+The returned JSON object is like so:
+```js
+{
+    'error_message': null,
+    'success': true,
+    'can_id': 1381134,
+    'lgn_url': 'https://appdev.isograd.com/continuelogin/CandidateContinueLogin?param=UVR1WjgwRXBwU0'
+}
+```
 
 
 # Actions
@@ -113,7 +155,7 @@ The response is a JSON object containing the following properties:
 | add_pro | 🟠 | 1: add remote proctoring to the test. Additional cost will apply.  |
 | max_num_tst | 🟠 | The maximum numbers of tests with this `rea_tst_id` the candidate is allowed to take |
 | rtn_pag | 🟠 | The URL of the page to which candidates will be redirected after submitting their feedback (or their results if they are allowed to see them) |
-| rtn_pag | 🟠 | A callback URL called by Isograd's system when the test is finished (before displaying the feedbacks/results page) |
+| cal_bac_pag | 🟠 | A callback URL called by Isograd's system when the test is finished (before displaying the feedbacks/results page) |
 | cpf_id | 🟠 | The ID of the "Compte Personnel de Formation" file associated to this test |
 
 The response will be a JSON object (unless `html` or `redirect` are set to 1) containing the following properties:
