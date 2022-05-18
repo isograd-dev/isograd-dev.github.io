@@ -24,7 +24,7 @@ Your client key and your client secret will be provided by Isograd upon request.
 ### Environments
 There are two environments, one for testing and the other for production:
 - Testing: https://appdev.isograd.com/public/lti.php 
-- Production : https://tosa.isograd.com/public/lti.php
+- Production : https://app.isograd.com/public/lti.php
 
 ### Use a service
 Most of the calls made to Isograd LTI Services require **custom parameters** to indicate what you want to achieve. Your system should include the possibility to add custom parameters in your LTI messages.
@@ -46,7 +46,7 @@ This call must contain two fields: `client_id` and `client_secret`. The content 
 ### Environments
 There are two environments, one for testing and the other for production:
 - Testing: https://appdev.isograd.com/api/usage
-- Production : https://tosa.isograd.com/api/usage
+- Production : https://app.isograd.com/api/usage
 
 The testing environment is IP-restricted: please send the IP addresses you will use to connect to the testing environment to [support@isograd.com](mailto:support@isograd.com).
 
