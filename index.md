@@ -51,7 +51,7 @@ There are two environments, one for testing and the other for production:
 The testing environment is IP-restricted: please send the IP addresses you will use to connect to the testing environment to [support@isograd.com](mailto:support@isograd.com).
 
 ### Use a service
-To use a service, make a POST request to the URL of the chosen environment. The header must contain the field `Authorisation: Bearer <your_token>`.
+To use a service, make a POST request to the URL of the chosen environment. The header must contain the field `Authorization: Bearer <your_token>`.
 
 ### Example
 Here is a Python script retrieving an access token, and using the service to [create a candidate](#create-a-candidate)
@@ -70,7 +70,7 @@ r_token = requests.post(auth_url, data=credentials)
 access_token = r_token.json()['access_token']
 
 # Use the service
-headers = {'Authorisation': 'Bearer ' + access_token}
+headers = {'Authorization': 'Bearer ' + access_token}
 url_dev = 'https://appdev.isograd.com/api/usage'
 
 payload = {
