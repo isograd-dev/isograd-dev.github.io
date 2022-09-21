@@ -146,7 +146,7 @@ The response is a JSON object containing the following properties:
 
 | Parameter  | Required  | Value |
 |---|---|---|
-| act_id | 🟩 | 2: do not add the test if the candidate has an unfinished test for this `rea_tst_id`. <br/>9: Create the test even if the candidate has an unfinished test. |
+| act_id | 🟩 | 2: do not add the test if the candidate has an unfinished test for this `rea_tst_id`. <br />9: Create the test even if the candidate has an unfinished test. |
 | rea_tst_id | 🟩  | The test identifier. To get the list, log into the Isograd's platform and click on "Help" in the left menu |
 | ema | 🔷 | Candidate's email address |
 | html | 🟠 | 1: The response will be an HTML `<a>` tag (with a class attribute `isograd_start_test_button`) |
