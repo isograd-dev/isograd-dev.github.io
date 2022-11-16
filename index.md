@@ -409,6 +409,7 @@ The following values must be used to specify languages:
 - 5: Spanish
 - 6: Italian
 - 7: Greek
+- 8: Arabic
 
 ## Distributor accounts
 Distributor accounts can perform actions on sub accounts that belong to them using the credentials of the distributor account. In such case an additional parameter `sub_com_id` can be added to the request to specify on which sub account the action should be performed.
