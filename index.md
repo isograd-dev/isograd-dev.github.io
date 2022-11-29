@@ -262,7 +262,7 @@ The response will be a JSON object (unless `redirect` is set to 1) containing th
 
 | Parameter  | Required  | Value |
 |---|---|---|
-| act_id | 🟩 | 6 |
+| act_id | 🟩 | 4 |
 | rea_tst_id | 🟩  | The test identifier |
 | ema | 🔷 | Candidate's email address |
 | pla_tst_id | 🟠 | The ID that was returned when the test was created. If this parameter is not provided, the system will look for the last test taken. |
