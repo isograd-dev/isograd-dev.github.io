@@ -219,12 +219,13 @@ The response will be a JSON object containing no specific property.
 ### Send registration email
 
 This action enables to send a registration email to the candidate immediately or in the future. A specific email sender may be provided.
-
+| Parameter  | Required  | Value |
+|---|---|---|
 | act_id | 🟩 | 42 |
 | pla_tst_id | 🟠  | The pla_tst_id of the test for which the registration email will be sent. Please note that if the candidate is registered for multiple assessments, the email content may include all the tests to which the candidate is registered |
 | can_id |  🟠 | The can_id returned when the candidate was created |
-| mai_tem_id | 🟩 | The id of the mail template that you want to use (can be found in the URL while editing the template on the plateform) |
-| sen_dat | 🟠 | The date on which the email should be send, format should be  |
+| mai_tem_id | 🟩 | The id of the mail template that you want to use (can be found in the URL while editing the template on the plateform)|
+| sen_dat | 🟠 | The date on which the email should be send, format should be  YYYY-MM-DD|
 | for_sen | 🟠 | If the value is 1 and a sen_dat is provided and if it is today or in the past then send the email immediately|
 | ema_sen | 🟠 | An approved email sender with a verified status|
 
