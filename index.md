@@ -215,6 +215,19 @@ The response will be a JSON object containing no specific property.
 |---|---|
 | 304 | The test is already started or does not exist |
 
+### update a candidate
+
+| Parameter  | Required  | Value |
+|---|---|---|
+| act_id | 🟩 | 51 |
+| can_id | 🟩  | ID of the candidate that was returned when the candidate was created |
+| gen_id | 🟠  | 1: male, 2: female, 3: not provided |
+| ema | 🟠 | Candidate's email address |
+| fst_nam | 🟠 | Candidate's first name |
+| lst_nam | 🟠 | Candidate's last name |
+| lan_id | 🟠 | Language code. See the [appendix](#language-codes) |
+
+
 ## Emails
 ### Send registration email
 
