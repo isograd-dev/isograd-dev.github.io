@@ -23,7 +23,7 @@ Your client key and your client secret will be provided by Isograd upon request.
 
 ### Environments
 There are two environments, one for testing and the other for production:
-- Testing: https://appdev.isograd.com/public/lti.php 
+- Testing: https://recette.isograd.com/public/lti.php 
 - Production : https://app.isograd.com/public/lti.php
 
 ### Use a service
@@ -45,7 +45,7 @@ This call must contain two fields: `client_id` and `client_secret`. The content 
 
 ### Environments
 There are two environments, one for testing and the other for production:
-- Testing: https://appdev.isograd.com/api/usage
+- Testing: https://recette.isograd.com/api/usage
 - Production : https://app.isograd.com/api/usage
 
 The testing environment is IP-restricted: please send the IP addresses you will use to connect to the testing environment to [support@isograd.com](mailto:support@isograd.com).
@@ -71,7 +71,7 @@ access_token = r_token.json()['access_token']
 
 # Use the service
 headers = {'Authorization': 'Bearer ' + access_token}
-url_dev = 'https://appdev.isograd.com/api/usage'
+url_dev = 'https://recette.isograd.com/api/usage'
 
 payload = {
     'act_id': 1,
@@ -92,7 +92,7 @@ The returned JSON object is like so:
     'error_message': null,
     'success': true,
     'can_id': 1381134,
-    'lgn_url': 'https://appdev.isograd.com/continuelogin/CandidateContinueLogin?param=UVR1WjgwRXBwU0'
+    'lgn_url': 'https://recette.isograd.com/continuelogin/CandidateContinueLogin?param=UVR1WjgwRXBwU0'
 }
 ```
 
