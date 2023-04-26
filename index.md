@@ -126,7 +126,7 @@ The answer will be a JSON object, containing a boolean `success`: if `true`, add
 | dep_id | 🟠 | The id of a Group within Isograd system to which the candidate should be added. Must be empty if a `ext_dep_id` value is provided|
 | ext_dep_id | 🟠 | The id of a group within your system to which the candidate should be added. If no group with this id exists, it will be automatically created |
 | psw | 🟠 | The candidate's password. If not provided, the system will generate one randomly |
-| nee_psw_rst | 🟠 | If set to 1 or omitted, the password is temporary, it will be displayed in regsitration emails and the candidate will need to change it upon first login, if set to 0, the password will be hashed, it will not be displayed in registration emails and the candidate will not have to change it upon first login |
+| no_psw_rst | 🟠 | If set to 1 the password will be hashed, it will not be displayed in registration emails and the candidate will not have to change it upon first login |
 | job_id | 🟠 | The id of the candidate's job profile |
 | has_dis | 🟠 | 1: if the candidate has a disability |
 
