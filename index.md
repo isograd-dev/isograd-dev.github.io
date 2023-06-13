@@ -157,7 +157,7 @@ The response is a JSON object containing the following properties:
 | add_pro | 🟠 | 1: add remote proctoring to the test. Additional cost will apply.  |
 | max_num_tst | 🟠 | The maximum numbers of tests with this `rea_tst_id` the candidate is allowed to take |
 | rtn_pag | 🟠 | The URL of the page to which candidates will be redirected after submitting their feedback (or their results if they are allowed to see them) |
-| cal_bac_pag | 🟠 | A callback URL called by Isograd's system when the test is finished (before displaying the feedbacks/results page) |
+| cal_bac_pag | 🟠 | A URL to which the plateform will submit a GET request when the test is complete(before displaying the feedbacks/results page) |
 | cpf_id | 🟠 | The ID of the "Compte Personnel de Formation" file associated to this test |
 
 The response will be a JSON object (unless `html` or `redirect` are set to 1) containing the following properties:
