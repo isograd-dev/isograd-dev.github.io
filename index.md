@@ -1,4 +1,4 @@
----
+-rea--
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
@@ -147,15 +147,15 @@ The response is a JSON object containing the following properties:
 
 | Parameter  | Required  | Value |
 |---|---|---|
-| act_id | 🟩 | 2: do not add the test if the candidate has an unfinished test for this `rea_tst_id`. <br />9: Create the test even if the candidate has an unfinished test. |
-| rea_tst_id | 🟩  | The test identifier. To get the list, log into the Isograd's platform and click on "Help" in the left menu |
+| act_id | 🟩 | 2: do not add the test if the candidate has an unfinished test for this `tst_frm_id`. <br />9: Create the test even if the candidate has an unfinished test. |
+| tst_frm_id | 🟩  | The test identifier. To get the list, log into the Isograd's platform and click on "Help" in the left menu. For compatibility reasons this parameter may be named rea_tst_id until 31/12/2025. |
 | ema | 🔷 | Candidate's email address |
 | nee_ful_scr | 🟠 | 1: Require full screen for the test |
 | html | 🟠 | 1: The response will be an HTML `<a>` tag (with a class attribute `isograd_start_test_button`) |
 | redirect | 🟠 | 1: The response will be a HTTP 302 status redirecting to the URL of the test start page |
 | ses_id | 🟠 | The session ID to which the test has to be associated |
 | add_pro | 🟠 | 1: add remote proctoring to the test. Additional cost will apply.  |
-| max_num_tst | 🟠 | The maximum numbers of tests with this `rea_tst_id` the candidate is allowed to take |
+| max_num_tst | 🟠 | The maximum numbers of tests with this `tst_frm_id` the candidate is allowed to take |
 | rtn_pag | 🟠 | The URL of the page to which candidates will be redirected after submitting their feedback (or their results if they are allowed to see them) |
 | cal_bac_pag | 🟠 | A URL to which the plateform will submit a GET request when the test is complete(before displaying the feedbacks/results page) |
 | cpf_id | 🟠 | The ID of the "Compte Personnel de Formation" file associated to this test |
@@ -170,10 +170,10 @@ Note: if the candidate has an unfinished test and `act_id` is set to `2`, the re
 
 | error_code  | error_message  |
 |---|---|
-| 106 | This `rea_tst_id` is not allowed |
+| 106 | This `tst_frm_id` is not allowed |
 | 107 | This candidate does not exist |
 | 301 | You have no more credits for this type of test |
-| 402 | The candidate has already taken `max_num_tst` for this `rea_tst_id` |
+| 402 | The candidate has already taken `max_num_tst` for this `tst_frm_id` |
 
 > 💡 Note: Most systems connecting to the Isograd platform will set the optional `redirect` parameter to true as it allows to have the standard expected behaviour: the candidate clicks on a link in the LMS and the test starts automatically.
 
@@ -253,7 +253,7 @@ The response JSON only includes a success field
 | Parameter  | Required  | Value |
 |---|---|---|
 | act_id | 🟩 | 6 |
-| rea_tst_id | 🟩  | The test identifier |
+| tst_frm_id | 🟩  | The test identifier. For compatibility reasons this parameter may be named rea_tst_id until 31/12/2025. | |
 | ema | 🔷 | Candidate's email address |
 | pla_tst_id | 🟠 | The ID that was returned when the test was created. If this parameter is not provided, the system will look for the last test taken. |
 | lan_id | 🟠 | Language code used for the report. See the [appendix](#language-codes) |
@@ -266,7 +266,7 @@ The response will be a JSON object (unless `redirect` is set to 1) containing th
 
 | error_code  | error_message  |
 |---|---|
-| 106 | This value for `rea_tst_id`  is not authorized |
+| 106 | This value for `tst_frm_id`  is not authorized |
 | 107 | Candidate does not exist |
 | 501 | Candidate has not taken this test |
 | 502 | Test is not finished |
@@ -277,7 +277,7 @@ The response will be a JSON object (unless `redirect` is set to 1) containing th
 | Parameter  | Required  | Value |
 |---|---|---|
 | act_id | 🟩 | 4 |
-| rea_tst_id | 🟩  | The test identifier |
+| tst_frm_id | 🟩  | The test identifier. For compatibility reasons this parameter may be named rea_tst_id until 31/12/2025. | |
 | ema | 🔷 | Candidate's email address |
 | pla_tst_id | 🟠 | The ID that was returned when the test was created. If this parameter is not provided, the system will look for the last test taken. |
 
@@ -305,7 +305,7 @@ The potential values for `gra_typ_id` are:
 | Parameter  | Required  | Value |
 |---|---|---|
 | act_id | 🟩 | 5 |
-| rea_tst_id | 🟩  | The test identifier |
+| tst_frm_id | 🟩  | The test identifier. For compatibility reasons this parameter may be named rea_tst_id until 31/12/2025. | |
 | ema | 🔷 | Candidate's email address |
 | pla_tst_id | 🟠 | The ID that was returned when the test was created. If this parameter is not provided, the system will look for the last test taken. |
 | des_lan_id | 🟠 | Language code used for the details. See the [appendix](#language-codes) |
