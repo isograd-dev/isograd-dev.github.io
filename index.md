@@ -1,13 +1,21 @@
--rea--
+---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
-title: Isograd API/LTI documentation
 ---
 
-1. Table of Content
+<style>
+  
+</style>
+
+<div id="toc">
+
+* TOC
 {:toc}
+
+</div>
+
+<div id="content">
 
 # Introduction
 The aim of this document is to describe how to use the services the Isograd system offers, either to LTI consumers or via the API.
@@ -443,3 +451,4 @@ types are converted into a decimal number between 0 and 1 according to the below
 answers / number of questions
 - RANGE_GRADE_TYPE = 5, the middle value of the relevant range divided by 1000
 - ON_100_AVERAGE_GRADE_TYPE = 15, the score divided by 1000
+  </div>
