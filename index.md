@@ -56,7 +56,6 @@ There are two environments, one for testing and the other for production:
 - Testing: https://recette.isograd.com/api/usage
 - Production : https://app.isograd.com/api/usage
 
-The testing environment is IP-restricted: please send the IP addresses you will use to connect to the testing environment to [support@isograd.com](mailto:support@isograd.com).
 
 ### Use a service
 To use a service, make a POST request to the URL of the chosen environment. The header must contain the field `Authorization: Bearer <your_token>`.
