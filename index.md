@@ -235,7 +235,7 @@ The response will be a JSON object containing no specific property.
 The response will be a JSON object (unless `redirect` is set to 1) containing the following properties:
 - `tst_url`: the URL to start the confirmation test.
   
-### update a candidate
+### Update a candidate
 
 | Parameter  | Required  | Value |
 |---|---|---|
