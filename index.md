@@ -223,6 +223,18 @@ The response will be a JSON object containing no specific property.
 |---|---|
 | 304 | The test is already started or does not exist |
 
+
+### Add a confirmation test to a completed test
+
+| Parameter  | Required  | Value |
+|---|---|---|
+| act_id | 🟩 | 58 |
+| pla_tst_id | 🟩  | ID of the test for which a confirmation test shoul be created (the test has to be already completed) |
+| redirect | 🟠 | If set to 1: The response will be a HTTP 302 status redirecting to the URL of the test start page |
+
+The response will be a JSON object (unless `redirect` is set to 1) containing the following properties:
+- `tst_url`: the URL to start the confirmation test.
+  
 ### update a candidate
 
 | Parameter  | Required  | Value |
