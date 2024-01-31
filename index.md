@@ -248,6 +248,15 @@ The response will be a JSON object (unless `redirect` is set to 1) containing th
 | lst_nam | 🟠 | Candidate's last name |
 | lan_id | 🟠 | Language code. See the [appendix](#language-codes) |
 
+### Delete a candidate
+
+| Parameter  | Required  | Value |
+|---|---|---|
+| act_id | 🟩 | 24 |
+| can_id |  🟠  | ID of the candidate to be deleted, must be provided except if ema is provided |
+| ema | 🟠 | ema of the candidate to be deleted, must be provided except if can_id is provided |
+
+The response will be a JSON object containing only a success property.
 
 ## Emails
 ### Send registration email
