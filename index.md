@@ -37,11 +37,12 @@ There are two environments, one for testing and the other for production:
 ### Use a service
 Most of the calls made to Isograd LTI Services require **custom parameters** to indicate what you want to achieve. Your system should include the possibility to add custom parameters in your LTI messages.
 
-![](lti_additional_param.jpg)
+![](/assets/img/lti_additional_param.jpg)
 
 ### Example
-To manually test your requests, you can use the LTI Emulation tool accessible here: [http://ltiapps.net/test/tc.php](http://ltiapps.net/test/tc.php). Below is an example of such a test:
-![](lti_example.jpg)
+To manually test your requests, you can use the LTI Emulation tool accessible here: [https://saltire.lti.app/platform](https://saltire.lti.app/platform). Below is an example of such a test:
+![](lti_message.jpg)
+![](lti_user.jpg)
 
 ## API
 ### Connexion
