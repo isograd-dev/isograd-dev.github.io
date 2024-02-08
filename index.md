@@ -167,6 +167,7 @@ The response is a JSON object containing the following properties:
 | rtn_pag | 🟠 | The URL of the page to which candidates will be redirected after submitting their feedback (or their results if they are allowed to see them) |
 | cal_bac_pag | 🟠 | A URL to which the plateform will submit a GET request when the test is complete(before displaying the feedbacks/results page) |
 | cpf_id | 🟠 | The ID of the "Compte Personnel de Formation" file associated to this test |
+| nb_test_by_credit | 🟠 | Use multi pack of credits (2,3,4) |
 
 The response will be a JSON object (unless `html` or `redirect` are set to 1) containing the following properties:
 - `tst_url`: the URL that will automatically start the specified test
