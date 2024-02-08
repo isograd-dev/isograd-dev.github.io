@@ -41,8 +41,8 @@ Most of the calls made to Isograd LTI Services require **custom parameters** to 
 
 ### Example
 To manually test your requests, you can use the LTI Emulation tool accessible here: [https://saltire.lti.app/platform](https://saltire.lti.app/platform). Below is an example of such a test:
-![](lti_message.jpg)
-![](lti_user.jpg)
+![](/assets/img/lti_message.jpg)
+![](/assets/img/lti_user.jpg)
 
 ## API
 ### Connexion
