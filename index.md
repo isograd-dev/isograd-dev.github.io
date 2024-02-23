@@ -23,11 +23,19 @@ The aim of this document is to describe how to use the services the Isograd syst
 # Quick start
 ## LTI
 ### Connexion
+
+Isograd plateform is compatible with both LTI 1.1 and LTI 1.3 protocols
+
+#### LTI 1.1
 Your system should include an area to define LTI providers. In this area, you must:
 - Give a name to Isograd LTI Provider
 - Specify your client key
 - Specify your client secret
 Your client key and your client secret will be provided by Isograd upon request.
+
+#### LTI 1.3
+
+...
 
 ### Environments
 There are two environments, one for testing and the other for production:
