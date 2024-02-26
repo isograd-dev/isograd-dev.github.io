@@ -35,7 +35,13 @@ Your client key and your client secret will be provided by Isograd upon request.
 
 #### LTI 1.3
 
-...
+**What we require from you**
+
+![](/assets/img/platform.png)
+
+**What we will provide to you**
+
+![](/assets/img/tool.png)
 
 ### Environments
 There are two environments, one for testing and the other for production:
