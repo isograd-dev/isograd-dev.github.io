@@ -155,7 +155,7 @@ The answer will be a JSON object, containing a boolean `success`: if `true`, add
 
 The response is a JSON object containing the following properties:
 - `can_id`: unique integer id of the created candidate on Isograd's platform
-- `lgn_url`: a url that can be used by the candidate to login into the platform without entering any credentials
+- `lgn_url`: a url that can be used by the candidate to login into the platform without entering any credentials. This url is only valid for 30 minutes
 
 **Errors**
 
