@@ -434,6 +434,7 @@ The response will be a HTTP redirection to the Admin module
 
 
 The response will be a HTTP redirection to the candidate's account page, where they can access their:
+- Tests to take
 - Diplomas
 - Assessment reports
 - Questions and correct answers for assessment tests.
