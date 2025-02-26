@@ -279,6 +279,8 @@ The response will be a JSON object containing only a success property.
 ### Send registration email
 
 This action enables to send a registration email to the candidate immediately or in the future. A specific email sender may be provided.
+
+
 | Parameter  | Required  | Value |
 |---|---|---|
 | act_id | 🟩 | 42 |
