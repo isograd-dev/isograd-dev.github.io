@@ -2,6 +2,11 @@
 ---
 
 @import "minima"; 
+html {
+  scroll-padding-top: 80px;
+  overflow: scroll;
+}
+
 header.site-header{
   position: fixed;
   top: 0;
