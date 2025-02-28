@@ -20,6 +20,8 @@ layout: home
 # Introduction
 The aim of this document is to describe how to use the services the Isograd system offers, either to LTI consumers or via the API.
 
+
+
 # Quick start
 ## LTI
 ### Connexion
@@ -33,6 +35,7 @@ Your system should include an area to define LTI providers. In this area, you mu
 - Specify your client secret
 Your client key and your client secret will be provided by Isograd upon request.
 
+
 #### LTI 1.3
 
 **What we require from you**
@@ -43,22 +46,28 @@ Your client key and your client secret will be provided by Isograd upon request.
 
 ![](/assets/img/tool.png)
 
+
 ### Environments
 There are two environments, one for testing and the other for production:
 - Testing: https://recette.isograd.com/public/lti.php 
 - Production : https://app.isograd.com/public/lti.php
+
 
 ### Use a service
 Most of the calls made to Isograd LTI Services require **custom parameters** to indicate what you want to achieve. Your system should include the possibility to add custom parameters in your LTI messages.
 
 ![](/assets/img/lti_additional_param.jpg)
 
+
 ### Example
 To manually test your requests, you can use the LTI Emulation tool accessible here: [https://saltire.lti.app/platform](https://saltire.lti.app/platform). Below is an example of such a test:
 ![](/assets/img/lti_message.jpg)
 ![](/assets/img/lti_user.jpg)
 
+
+
 ## API
+
 ### Connexion
 The authentication is done via [OAuth](https://oauth.net/getting-started/). To get a token, you need to make a POST request to the following URL:
 ```
