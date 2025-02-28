@@ -2,10 +2,27 @@
 ---
 
 @import "minima"; 
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgb(253, 253, 253);
+  z-index: 20;
+}
+
+
+div.wrapper {
+  padding: 10px;
+  padding-top: 0;
+  display: flex;
+  max-width: 100%;
+}
+
+
 
 #toc {
   position: sticky;
-  top: 5px;
+  top: 70px;
   flex: 0 1 300px;
   min-width: 300px;
   height: 95vh;
@@ -31,9 +48,6 @@ main .wrapper .home {
   min-width: 724px;
 }
 
-div.wrapper {
-  padding: 10px;
-  padding-top: 0;
-  display: flex;
-  max-width: 1000%;
-}
+
+
+
