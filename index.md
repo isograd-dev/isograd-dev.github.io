@@ -159,7 +159,7 @@ The answer will be a JSON object, containing a boolean `success`: if `true`, add
 | psw | 🟠 | The candidate's password. If not provided, the system will generate one randomly |
 | no_psw_rst | 🟠 | If set to 1 the password will be hashed, it will not be displayed in registration emails and the candidate will not have to change it upon first login |
 | job_id | 🟠 | The id of the candidate's job profile |
-| has_dis | 🟠 | 1: if the candidate has a disability |
+| xtr_tim_fac | 🟠 | Percentage factor defining the additional time granted to a candidate (e.g., 0 for no extra time, 50 for +50% time, 100 for +100% time, 200 for +200% time), applied to both total test duration and in-application question time |
 
 
 The response is a JSON object containing the following properties:
