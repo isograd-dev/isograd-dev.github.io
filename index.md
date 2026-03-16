@@ -461,6 +461,23 @@ The response will be a HTTP redirection to the candidate's account page, where t
 The response will be a JSON object containing the following properties:
 - `tests`: An array of the IDs of the allowed tests.
 
+### Get detailed available tests list
+
+| Parameter  | Required  | Value |
+|---|---|---|
+| act_id | 🟩 | 64 |
+| lan_id | 🟠 | The language of the tests to be returned. See the [appendix](#language-codes) |
+
+The response will be a JSON object containing the following properties:
+- des : the name of the test
+- lon_des : a short description of the test
+- img_fil: a URL pointing to the icon of the subject of the test (can be .jpg, .png or .svg)
+- tst_frm_id: the ID of the test
+- level: 'Adaptive', 'Easy', 'Medium' or 'Difficult'
+- tst_tim: Duration (in minutes)
+- cre_dat: Creation date (using format YYYY-MM-DD)
+
+
 ### Get available credits
 
 | Parameter  | Required  | Value |
