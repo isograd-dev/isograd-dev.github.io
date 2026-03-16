@@ -461,7 +461,7 @@ The response will be a HTTP redirection to the candidate's account page, where t
 The response will be a JSON object containing the following properties:
 - `tests`: An array of the IDs of the allowed tests.
 
-### Get detailed available tests list
+### Get detailed available tests list (to be released on 2026-03-24)
 
 | Parameter  | Required  | Value |
 |---|---|---|
