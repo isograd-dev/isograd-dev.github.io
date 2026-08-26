@@ -186,6 +186,7 @@ The response is a JSON object containing the following properties:
 | redirect | 🟠 | 1: The response will be a HTTP 302 status redirecting to the URL of the test start page |
 | ses_id | 🟠 | The session ID to which the test has to be associated |
 | add_pro | 🟠 | 1: add remote proctoring to the test. Additional cost will apply.  |
+| pro_prm_uid | 🟠 | The UID of one of your account's proctoring profiles to associate with the test (visible in the platform under Settings > Proctoring parameters). The profile must belong to your account. Takes precedence over `add_pro` and the account defaults. For remote proctoring profiles, additional cost will apply. |
 | max_num_tst | 🟠 | The maximum numbers of tests with this `tst_frm_id` the candidate is allowed to take |
 | max_num_tst_per | 🟠 | The maximum numbers of tests with this `tst_frm_id` the candidate is allowed to take every X day(s)|
 | rtn_pag | 🟠 | The URL of the page to which candidates will be redirected after submitting their feedback (or their results if they are allowed to see them) |
@@ -206,6 +207,7 @@ Note: if the candidate has an unfinished test and `act_id` is set to `2`, the re
 | 106 | This `tst_frm_id` is not allowed |
 | 107 | This candidate does not exist |
 | 301 | You have no more credits for this type of test |
+| 305 | This `pro_prm_uid` does not exist on your account |
 | 402 | The candidate has already taken `max_num_tst` for this `tst_frm_id` |
 
 > 💡 Note: Most systems connecting to the Isograd platform will set the optional `redirect` parameter to true as it allows to have the standard expected behaviour: the candidate clicks on a link in the LMS and the test starts automatically.
@@ -224,6 +226,7 @@ The system will perform successively the Create Candidate and Add a Test actions
 |---|---|---|
 | act_id | 🟩 | 16: add online proctoring, 17: remove online proctoring |
 | pla_tst_id | 🟩  | ID of the test that was returned when the test was created |
+| pro_prm_uid | 🟠 | (act_id 16 only) The UID of one of your account's proctoring profiles to associate with the test (visible in the platform under Settings > Proctoring parameters). Defaults to your account's remote proctoring profile. For profiles without remote proctoring (e.g. full screen), the profile is associated with the test without any proctoring cost. |
 
 The response will be a JSON object containing no specific property.
 
@@ -232,6 +235,7 @@ The response will be a JSON object containing no specific property.
 | error_code  | error_message  |
 |---|---|
 | 303 | You have no proctoring credit left |
+| 305 | This `pro_prm_uid` does not exist on your account |
 
 
 ### Delete a test
