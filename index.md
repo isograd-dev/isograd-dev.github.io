@@ -470,6 +470,7 @@ The response will be a JSON object containing the following properties:
 | Parameter  | Required  | Value |
 |---|---|---|
 | act_id | 🟩 | 64 |
+| tst_frm_typ_id | 🟠 | 10 for assessment tests, 20 for certification exams |
 | lan_id | 🟠 | The language of the tests to be returned. See the [appendix](#language-codes) |
 
 The response will be a JSON object containing the following properties:
