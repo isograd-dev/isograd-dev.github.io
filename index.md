@@ -28,6 +28,9 @@ The aim of this document is to describe how to use the services the Isograd syst
 
 Isograd plateform is compatible with both LTI 1.1 and LTI 1.3 protocols
 
+### Rate Limitation
+The maximum number of queries per minute from a given IP is limited to 120
+
 #### LTI 1.1
 Your system should include an area to define LTI providers. In this area, you must:
 - Give a name to Isograd LTI Provider
@@ -80,6 +83,8 @@ There are two environments, one for testing and the other for production:
 - Testing: https://recette.isograd.com/api/usage
 - Production : https://app.isograd.com/api/usage
 
+### Rate Limitation
+The maximum number of queries per minute from a given IP is limited to 120
 
 ### Use a service
 To use a service, make a POST request to the URL of the chosen environment. The header must contain the field `Authorization: Bearer <your_token>`.
