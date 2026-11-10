@@ -186,11 +186,9 @@ The response is a JSON object containing the following properties:
 | act_id | 🟩 | 2: do not add the test if the candidate has an unfinished test for this `tst_frm_id`. <br />9: Create the test even if the candidate has an unfinished test. |
 | tst_frm_id | 🟩  | The test identifier. To get the list, log into the Isograd's platform and click on "Help" in the left menu. For compatibility reasons this parameter may be named rea_tst_id until 31/12/2025. |
 | ema | 🔷 | Candidate's email address |
-| nee_ful_scr | 🟠 | 1: Require full screen for the test |
 | html | 🟠 | 1: The response will be an HTML `<a>` tag (with a class attribute `isograd_start_test_button`) |
 | redirect | 🟠 | 1: The response will be a HTTP 302 status redirecting to the URL of the test start page |
 | ses_id | 🟠 | The session ID to which the test has to be associated |
-| add_pro | 🟠 | 1: add remote proctoring to the test. Additional cost will apply.  |
 | pro_prm_uid | 🟠 | The UID of one of your account's proctoring profiles to associate with the test (visible in the platform under Settings > Proctoring parameters). The profile must belong to your account. Takes precedence over `add_pro` and the account defaults. For remote proctoring profiles, additional cost will apply. |
 | max_num_tst | 🟠 | The maximum numbers of tests with this `tst_frm_id` the candidate is allowed to take |
 | max_num_tst_per | 🟠 | The maximum numbers of tests with this `tst_frm_id` the candidate is allowed to take every X day(s)|
